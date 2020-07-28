@@ -2,6 +2,14 @@ require "pry"
 
 def roll_call_dwarves(name)
   name.each_with_index {|name, number| puts "#{number + 1} #{name}" }
+def roll_call_dwarves(dwarf_names, index)
+  i = 0 
+
+  while i < index.length 
+    collection << yield(dwarf_names[i])
+    i = i + 1 
+  end
+  puts collection
 end
 
 def summon_captain_planet(planeteer_calls)
